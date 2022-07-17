@@ -55,6 +55,7 @@ EOF
 
 " {{ window operation
 nnoremap <Leader>q :q<CR>
+nnoremap <Leader>vs :vs<CR>
 " }}
 
 " {{ terminal operation
