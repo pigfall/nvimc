@@ -97,6 +97,7 @@ inoremap <c-f> <Right>
 inoremap <c-b> <Left>
 inoremap <M-f> <ESC>ea
 inoremap <c-j> <ESC>o
+inoremap <c-e> <ESC>A
 " }
 
 " { တ abbrevitations
