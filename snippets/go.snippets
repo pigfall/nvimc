@@ -1,0 +1,33 @@
+snippet output "emitter properties"
+	fmt.Println($1, $2)
+
+snippet it "import"
+	import(
+		"$1"
+	)
+snippet tt "test"
+	func Test$1(t *testing.T){
+
+	}
+snippet rt "return"
+	return $1
+snippet re "return err"
+	return err
+snippet rn "return with value,err"
+	return $1, err
+snippet ie "if err"
+	if err != nil{
+		${1}
+	}
+snippet ir "if err return"
+	if err != nil {
+		return ${1}, err
+	}
+snippet io "if err return"
+	if err != nil {
+		return err
+	}
+snippet td "TODO"
+	panic("TODO")
+snippet ct "ctx"
+	ctx context.Context
