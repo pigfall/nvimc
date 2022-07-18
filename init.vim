@@ -24,6 +24,9 @@ Plug 'MattesGroeger/vim-bookmarks'
 " { easymotion
 Plug 'easymotion/vim-easymotion'
 " }
+" {
+Plug 'fatih/vim-go'
+" }
 call plug#end()
 
 " { တ common_keymap
@@ -230,3 +233,9 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 " }
+
+"{ တ vim-go
+let g:go_gopls_enabled = 0
+let g:go_imports_autosave = 0
+let g:go_fmt_autosave =0
+"}
