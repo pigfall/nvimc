@@ -66,7 +66,8 @@ nnoremap <Leader>tt :tabnew<CR>:terminal<CR>
 nnoremap <Leader>tc :terminal<CR>
 nnoremap <Leader>tp :lua require("utils").term_in_cur_file_dir()<CR>
 nnoremap <Leader>ts :vs<CR><c-w>l:terminal<CR>
-tnoremap <c-j> <c-\><c-n> " switch from terminal insert mode to normal mode
+" switch from terminal insert mode to normal mode
+tnoremap <c-j> <c-\><c-n> 
 " }}
 " {{ tab operation
 nnoremap <M-1> 1gt
