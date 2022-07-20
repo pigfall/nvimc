@@ -157,6 +157,7 @@ EOF
 nmap <Leader>mt <Plug>BookmarkToggle
 nmap <Leader>ma  <Plug>BookmarkAnnotate
 nmap <Leader>ms  <Plug>BookmarkShowAll
+let g:bookmark_no_default_key_mappings = 1
 " }
 
 " { တ easymotion
