@@ -152,7 +152,7 @@ inoremap <M-p> <cmd>Telescope find_files<cr>
 inoremap <M-P> <cmd>Telescope buffers<cr>
 nnoremap <Leader>b <cmd>Telescope buffers<cr>
 lua << EOF
-  require('telescope').setup{ defaults = { file_ignore_patterns = {"^build/.*","build\\.*","target","\.git"} } }
+  require('telescope').setup{ defaults = { file_ignore_patterns = {"^build/.*","build\\.*","target","\\.git"} } }
 EOF
 " }
 
