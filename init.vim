@@ -252,3 +252,14 @@ let g:go_gopls_enabled = 0
 let g:go_imports_autosave = 0
 let g:go_fmt_autosave =0
 "}
+
+" { some features only need in local dev
+lua << EOF
+local status,module = pcall(require,"local")
+if not status then
+  if not string.find(module,"not found") then
+    print(module)
+  end
+end
+EOF
+" }
