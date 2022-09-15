@@ -206,6 +206,8 @@ augroup tzz-coc
 	exec "autocmd FileType " . join(lang_list,",") . " nmap <buffer> <c-d><c-n> <Plug>(coc-diagnostic-next)" 
 	exec "autocmd FileType " . join(lang_list,",") . " inoremap <silent><expr> <c-n> coc#pum#visible() ? coc#pum#next(1) : CheckBackspace() ? \"\<Tab>\" : coc#refresh()" 
 	exec "autocmd FileType " . join(lang_list,",") . " inoremap <expr> <c-p> coc#pum#visible() ? coc#pum#prev(1) : \"\<C-h>\"" 
+	exec "autocmd FileType " . join(lang_list,",") . " nmap gr <Plug>(coc-references)" 
+	exec "autocmd FileType " . join(lang_list,",") . " nmap gi <Plug>(coc-implementation)" 
 augroup end
 " }
 
