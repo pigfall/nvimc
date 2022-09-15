@@ -120,7 +120,7 @@ ab :loading: ⌛
 "
 
 " { တ colorscheme
-colorscheme nightfox
+"colorscheme nightfox
 " make bg transparent
 hi Normal ctermbg=NONE guibg=NONE
 hi NormalNC ctermbg=NONE guibg=NONE
@@ -204,6 +204,8 @@ augroup tzz-coc
 	exec "autocmd FileType " . join(lang_list,",") . " nmap <buffer> <c-]> :lua tzz_coc_jump_def()<CR>"
 	exec "autocmd FileType " . join(lang_list,",") . " nmap <buffer> <c-n> <Plug>(coc-diagnostic-next-error)" 
 	exec "autocmd FileType " . join(lang_list,",") . " nmap <buffer> <c-d><c-n> <Plug>(coc-diagnostic-next)" 
+	exec "autocmd FileType " . join(lang_list,",") . " inoremap <silent><expr> <c-n> coc#pum#visible() ? coc#pum#next(1) : CheckBackspace() ? \"\<Tab>\" : coc#refresh()" 
+	exec "autocmd FileType " . join(lang_list,",") . " inoremap <expr> <c-p> coc#pum#visible() ? coc#pum#prev(1) : \"\<C-h>\"" 
 augroup end
 " }
 
