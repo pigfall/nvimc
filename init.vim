@@ -109,7 +109,7 @@ ab :flower: 🌸
 ab :tada: 🎉
 ab :cross: ❌
 ab :check: ✅
-ab :warning:⚠️
+ab :warning: ⚠️
 ab :bug: 🐛
 ab :devil: 😈
 ab :ch: တ
@@ -136,6 +136,9 @@ set shiftwidth=2
 " {{ case
 set ignorecase
 set smartcase
+" }}
+" {{ mouse
+set mouse=
 " }}
 " }
 
