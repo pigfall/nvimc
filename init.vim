@@ -120,7 +120,7 @@ ab :loading: ⌛
 "
 
 " { တ colorscheme
-"colorscheme nightfox
+colorscheme nightfox
 " make bg transparent
 hi Normal ctermbg=NONE guibg=NONE
 hi NormalNC ctermbg=NONE guibg=NONE
