@@ -33,7 +33,7 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
 call plug#end()
 
 " { တ common_keymap
-let mapleader = "-" 
+let mapleader = "'" 
 
 " {{ switch mode between normal and insert
 inoremap <Leader>w <ESC>:wa<CR>
