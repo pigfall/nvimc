@@ -201,6 +201,7 @@ lua << EOF
 	end
 EOF
 
+
 augroup tzz-coc
 	au! 
 	exec "autocmd FileType " . join(lang_list,",") . " inoremap <silent><expr> <c-o> coc#refresh()"
@@ -211,13 +212,15 @@ augroup tzz-coc
 	exec "autocmd FileType " . join(lang_list,",") . " inoremap <expr> <c-p> coc#pum#visible() ? coc#pum#prev(1) : \"\<C-h>\"" 
 	exec "autocmd FileType " . join(lang_list,",") . " nmap gr <Plug>(coc-references)" 
 	exec "autocmd FileType " . join(lang_list,",") . " nmap gi <Plug>(coc-implementation)" 
-  exec "autocmd FileType " . join(lang_list,",") . " inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm() : \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>i\""
+	exec "autocmd FileType " . join(lang_list,",") . " inoremap <silent><expr> <c-u>  coc#pum#confirm()" 
+	exec "autocmd FileType " . join(lang_list,",") . " inoremap <silent> ,s <C-r>=CocActionAsync('showSignatureHelp')<CR>" 
 augroup end
 " }
 
+
 " { lua snippets
 lua << EOF
-require("luasnip.loaders.from_snipmate").lazy_load()
+require("luasnip.loaders.from_snipmate").lazy_load({paths={"~/.config/nvim/snippets","~/.tzz/nvim/snippets"}})
 EOF
 imap <silent><expr> <c-l> luasnip#expand_or_jumpable() ? '<Plug>luasnip-expand-or-jump' : '<Tab>'
 snoremap <silent> <c-l> <cmd>lua require('luasnip').jump(1)<Cr>
