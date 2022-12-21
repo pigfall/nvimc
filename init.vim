@@ -147,6 +147,7 @@ nnoremap <Leader>nn :NERDTree<CR>
 nnoremap <Leader>nc :NERDTreeClose<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
 nnoremap <s-e> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
 " }
 
 " { တ telescope
