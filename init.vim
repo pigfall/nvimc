@@ -98,6 +98,7 @@ inoremap <c-n> <Down>
 inoremap <c-p> <Up>
 inoremap <c-f> <Right>
 inoremap <c-b> <Left>
+inoremap <M-b> <ESC>bi
 inoremap <M-f> <ESC>ea
 inoremap <c-j> <ESC>o
 inoremap <c-e> <ESC>A
