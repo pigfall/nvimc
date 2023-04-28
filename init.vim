@@ -85,6 +85,8 @@ inoremap <cr> <Cmd> call TzzEnter()<Cr>
 inoremap ) <Cmd> call  TzzFeedLeftParenthese()<CR>
 inoremap { {}<left>
 inoremap ( ()<left>
+inoremap <C-k> <ESC>xi
+inoremap <M-k> <ESC>Di
 " }
 
 " { တ command mode modifier
