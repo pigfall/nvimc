@@ -1,36 +1,17 @@
-call plug#begin('~/.vim/plugged')
-" { colorscheme
-Plug 'EdenEast/nightfox.nvim'
-" }
-" { NERTTree
-Plug 'scrooloose/nerdtree'
-" }
-" { coc
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" }
-" { telescope
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-" }
-" { Treesitter
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-" }
-" { lua snippets
-Plug 'L3MON4D3/LuaSnip'
-" }
-" { bookmark
-Plug 'MattesGroeger/vim-bookmarks'
-" }
-" { easymotion
-Plug 'easymotion/vim-easymotion'
-" }
-" {
-Plug 'fatih/vim-go'
-" }
-"{
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install' }
-"}
-call plug#end()
+" {{ quick access config file
+" set -es to edit VIMRC
+lua << EOF
+	local first_runtime_path_index = string.find(vim.o["runtimepath"],",") - 1
+	local first_runtime_path =  string.sub(vim.o["runtimepath"],0,first_runtime_path_index)
+  vim.cmd(string.format("source %s/plug.vim", first_runtime_path))
+	vim.cmd(string.format("nnoremap -e :e %s/init.vim <CR>",first_runtime_path))
+	local init_vim_filepath = string.format("%s/init.vim",first_runtime_path)
+	vim.cmd(string.format("nnoremap -es :e %s/init.vim <CR>",first_runtime_path))
+	vim.cmd(string.format("nnoremap -ss :source %s/init.vim <CR>",first_runtime_path))
+	vim.cmd(string.format("let g:init_vim='%s'",init_vim_filepath))
+EOF
+
+" }}
 
 " { တ common_keymap
 let mapleader = "'" 
@@ -45,19 +26,6 @@ inoremap jk <ESC>
 nnoremap <s-u> :e#<CR> " swithc to last edit option
 " }}
 
-" {{ quick access config file
-" set -es to edit VIMRC
-lua << EOF
-	local first_runtime_path_index = string.find(vim.o["runtimepath"],",") - 1
-	local first_runtime_path =  string.sub(vim.o["runtimepath"],0,first_runtime_path_index)
-	vim.cmd(string.format("nnoremap -e :e %s/init.vim <CR>",first_runtime_path))
-	local init_vim_filepath = string.format("%s/init.vim",first_runtime_path)
-	vim.cmd(string.format("nnoremap -es :e %s/init.vim <CR>",first_runtime_path))
-	vim.cmd(string.format("nnoremap -ss :source %s/init.vim <CR>",first_runtime_path))
-	vim.cmd(string.format("let g:init_vim='%s'",init_vim_filepath))
-EOF
-
-" }}
 
 " {{ window operation
 nnoremap <Leader>q :q<CR>
